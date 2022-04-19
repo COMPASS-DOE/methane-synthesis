@@ -1,0 +1,16 @@
+# OS files
+.DS_Store
+
+# R and RStudio files
+.Rproj.user
+rs-synthesis_files/
+*.html
+*.png
+*.tiff
+.RData
+.Rhistory
+*_cache/*
+
+# Non-tracked files
+other/
+

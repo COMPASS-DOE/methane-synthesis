@@ -22,4 +22,5 @@ Studies were found using search terms; “methane” and "soil moisture manipula
 Seven datasets from COSORE (cloned September 7th 2021) contain methane and soil moisture data
 
 #Ameriflux
-15? upland sites have methane data
+Nine (9) upland sites have methane data. Downloaded using the AmerifluxR package April 19th 2022 (site zipped files),
+and April 20th 2022 (metadata .xlsx).

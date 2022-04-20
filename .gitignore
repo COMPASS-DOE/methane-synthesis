@@ -3,14 +3,10 @@
 
 # R and RStudio files
 .Rproj.user
-rs-synthesis_files/
+.RData
+.Rhistory
 *.html
 *.png
 *.tiff
-.RData
-.Rhistory
+*.zip
 *_cache/*
-
-# Non-tracked files
-other/
-

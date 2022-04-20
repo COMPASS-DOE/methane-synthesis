@@ -1,4 +1,7 @@
 
+rm(list=ls())
+#check working directory, set if needed
+#setwd("methane/methane-synthesis/")
 library(amerifluxr)
 library(pander)
 library(data.table)
@@ -34,6 +37,7 @@ data_sum <- amf_summarize_data(site_set = data_aval_sub$SITE_ID,
                                var_set = c("FCH4", "SWC"))
 pander::pandoc.table(data_sum)
 
+#download zip files for 9 sites
 for (x in UM) {
   KM_flux <- amf_download_base(
   user_id = "kendalynnm",
@@ -48,3 +52,31 @@ for (x in UM) {
   out_dir = getwd()
 )
 }
+
+#download meta-data
+  KM_meta <- amf_download_bif(
+    user_id = "kendalynnm",
+    user_email = "kendalynn.morris@pnnl.gov",
+    data_policy = "CCBY4.0",
+    agree_policy = TRUE,
+    intended_use = "synthesis",
+    intended_use_text = "methane fluxes across soil moisture contents",
+    verbose = TRUE,
+    out_dir = getwd()
+  )
+  
+#read in the first site
+Ho1 <- amf_read_base(
+  file = "AMF_US-Ho1_BASE-BADM_7-5.zip",
+  unzip = TRUE,
+  parse_timestamp = TRUE)
+
+#read in metadata
+MD <- amf_read_bif(file = "AMF_AA-Net_BIF_CCBY4_20220228.xlsx")
+#subset by target site
+Ho1_MD <- MD[MD$SITE_ID == "US-Ho1",]
+
+unique(Ho1_MD$VARIABLE_GROUP)
+paper <- amf_extract_badm(bif_data = Ho1_MD,
+                          select_group = "GRP_REFERENCE_PAPER")
+#Where is Ho1's SWC data???

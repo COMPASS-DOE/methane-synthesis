@@ -24,3 +24,6 @@ Seven datasets from COSORE (cloned September 7th 2021) contain methane and soil 
 #Ameriflux
 Nine (9) upland sites have methane data. Downloaded using the AmerifluxR package April 19th 2022 (site zipped files),
 and April 20th 2022 (metadata .xlsx).
+
+AmerifluxMethSites = code for site selection
+AmerifluxMethInitial = code for read-in of relevant data and aggregation

@@ -2,9 +2,11 @@
 .DS_Store
 
 # R and RStudio files
-.Rproj.user
-.RData
-.Rhistory
+*.Rproj.user
+*.RData
+*.Rhistory
+*.xlsx
+*.csv
 *.html
 *.png
 *.tiff

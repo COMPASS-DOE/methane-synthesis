@@ -1,0 +1,26 @@
+
+Codes from BR-Npw
+# "YEAR","MONTH","DAY","DOY","HOUR","MINUTE",
+# "TIMESTAMP","TIMESTAMP_START","TIMESTAMP_END"
+
+"CH4", methane mole fraction in wet air
+"FCH4", turbulent flux methane (nmol m^-2 s^-1)
+"FCH4_PI_F", tower-team gap-filled turbulent flux methane (nmol m^-2 s^-1)
+"CO2", mole fraction in wet air
+"FC", turbulent flux CO2 (nmol m^-2 s^-1)
+"FC_PI_F", tower-team gap-filled turbulent flux CO2 (nmol m^-2 s^-1)
+"PA", atmospheric pressure (kPa)
+"TA", air temperature (C)
+"P", precipiation (mm)
+"TS_1_1_1", soil temperature (C), profile 1, depth 2 cm, sensor 1 
+"TS_1_2_1", soil temperature (C), profile 1, depth 5 cm, sensor 1 
+"TS_1_3_1", soil temperature (C), profile 1, depth 10 cm, sensor 1 
+"WTD", m
+
+New codes from US-Tur
+"FC_SSITC_TEST", Results of the quality flagging for FC according to Foken et al 2004,
+based on a combination of Steady State and Integral Turbulence Characteristics tests
+by Foken and Wichura (1996) (i.e., 0, 1, 2)
+same for FCH4_SSITC_TEST
+
+Only data with quality 0 or 1 should be use (possibly not even 1)

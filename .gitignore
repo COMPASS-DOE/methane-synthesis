@@ -12,3 +12,4 @@
 *.tiff
 *.zip
 *_cache/*
+.Rhistory

@@ -57,15 +57,18 @@ for (site in sites) {
     pivot_longer(-TIMESTAMP) %>% 
     separate(name, into = c("variable", "other"),
              sep = "_", extra="merge", fill="right") %>%
-    na.omit()
+    drop_na(value)
   dat$site <- site
   write_csv(dat, file = tf, append = TRUE, col_names = !file.exists(tf))
 }
 
 results <- read.csv(tf)
 
+#next step
 #reshape data
-#save and list
+#filter by quality flags?
+#potential issue because not all sites have quality ratings
+#which versions to keep?
 
 #BR-Npw columns to keep
 # "YEAR","MONTH","DAY","DOY","HOUR","MINUTE",
